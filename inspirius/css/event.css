@@ -1020,6 +1020,10 @@ th {
     padding: 30px 0;
 }
 
+.highlight1 {
+    padding: 30px 0;
+}
+
 .section-title {
     text-align: center;
     margin: 70px 0 40px;
@@ -1644,6 +1648,28 @@ th {
     margin: auto;
 }
 
+.ratio {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-bottom: 100%;
+    position: relative;
+    width: 100%;
+}
+.img-circle {
+    border-radius: 50%;
+    border: 5px solid #a640d0;
+}
+.img-responsive {
+    display: block;
+    height: auto;
+    max-width: 100%;
+}
+
+.name {
+    text-align: center;
+    margin-bottom: 50px;
+}
 /* ================================================
    Pricing
    ================================================ */
