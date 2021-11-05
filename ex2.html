@@ -1,0 +1,39 @@
+<html>
+    <script type="text/javascript">
+        
+        function displayCounter() {
+            document.write('<h3 align="center">')
+            document.write("You've visited this page ")
+            if(counter == 0) document.write("for the first time.")
+            else document.write(counter + " times.")
+            document.writeln('</h3>')
+        }
+
+        function readCookie() {
+            var cookie = document.cookie
+            counter = 0
+            console.log(cookie)
+            if(cookie.length > 0){ 
+                var parsedCookie = cookie.split("=")
+                counter = parsedCookie[1]
+                ++counter
+            }
+            var nowDate = new Date()
+            var expdate = nowDate.getTime()
+            console.log(nowDate.toGMTString())
+            expdate += 3600000 //expires in 1 hour
+            nowDate.setTime(expdate)
+            console.log(nowDate.toGMTString())
+            newCookie = "pageCount=" + counter
+            newCookie += "; expires=" + nowDate.toGMTString() + "; SameSite=None; Secure"
+            document.cookie = newCookie
+            console.log(document.cookie)
+			console.log(newCookie)
+        }
+
+        readCookie();
+		displayCounter();
+
+    </script>
+
+</html>
